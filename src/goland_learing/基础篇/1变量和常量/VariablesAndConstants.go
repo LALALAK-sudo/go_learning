@@ -38,7 +38,35 @@ func main() {
 	fmt.Println("x=", x)
 	fmt.Println("y=", y)
 
+	test()
+	iota_test()
 }
 func foo() (int, string) {
 	return 10, "Q1mi"
+}
+
+func test() {
+	const pi = 3.14
+	const (
+		e = 2.718
+		A
+	)
+	fmt.Println(pi)
+	fmt.Println(e)
+	fmt.Println(A)
+
+}
+
+func iota_test() {
+	const (
+		_  = iota
+		KB = 1 << (10 * iota)
+		MB = 1 << (10 * iota)
+		GB = 1 << (10 * iota)
+		TB = 1 << (10 * iota)
+		PB = 1 << (10 * iota)
+	)
+	fmt.Println(KB)
+	fmt.Println(MB)
+	fmt.Println(GB)
 }
